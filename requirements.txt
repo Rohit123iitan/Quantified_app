@@ -1,4 +1,5 @@
 flask
+matplotlib
 flask_sqlalchemy
 flask-security
 flask_jwt_extended
