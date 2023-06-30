@@ -1,0 +1,1 @@
+u_n=User.query.filter_by(user_name=username).first()

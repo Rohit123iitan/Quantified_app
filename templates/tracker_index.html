@@ -1,0 +1,172 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+  <link rel="stylesheet" href="/static/design.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&display=swap" rel="stylesheet">
+  <title>Dashboard</title>
+</head>
+
+<body>
+  <!-- navbar -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+    <div class="container-fluid">
+      <!-- offcanvas trigger -->
+      <button class="navbar-toggler me-2" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+        aria-controls="offcanvasExample">
+        <span class="navbar-toggler-icon" data-bs-target="#offcanvasExample"></span>
+      </button>
+      <!-- offcanvas trigger -->
+      <a class="navbar-brand" href="#">Quantified self app</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link" aria-current="page" href="#">Home</a>
+          </li>
+        </ul>
+        <ul class="navbar-nav  mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" href="/logout">Logout</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- navbar -->
+  <!-- offcanvas -->
+
+  <div class="offcanvas offcanvas-start sidebar-nav bg-dark text-white" tabindex="-1" id="offcanvasExample"
+    aria-labelledby="offcanvasExampleLabel">
+    <div class="offcanvas-body p-0">
+      <nav class="navbar-dark">
+        <ul class="navbar-nav">
+          <li>
+            <div class="text-muted small fw-bold ">
+              Core
+            </div>
+          </li>
+          <li>
+            <a href="/dashboard" class="nav-link px-3 ">
+              <span class="me-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-speedometer" viewBox="0 0 16 16">
+                  <path
+                    d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z" />
+                  <path fill-rule="evenodd"
+                    d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z" />
+                </svg>
+              </span>
+              <span>
+                Dashboard
+              </span>
+            </a>
+          </li>
+          <li class="my-4">
+            <hr class="dropdown-divider" />
+          </li>
+          <li>
+						<div class="text-muted small fw-bold ">
+							Interface
+						</div>
+					</li>
+					<li>
+						<a class="nav-link px-3 sidebar-link" data-bs-toggle="collapse" href="#collapseExample"
+							role="button" aria-expanded="false" aria-controls="collapseExample">
+							<span>Info</span>
+							<span class="right icon ms-auto">
+								<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+									class="bi bi-chevron-down" viewBox="0 0 16 16">
+									<path fill-rule="evenodd"
+										d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z" />
+								</svg>
+							</span>
+						</a>
+						<div class="collapse" id="collapseExample">
+							<div class="navbar-nav ps-3">
+								<a href="/tracker_index" class="nav-link px-3 active">
+									<span>
+										<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+											fill="currentColor" class="bi bi-layout-text-sidebar-reverse"
+											viewBox="0 0 16 16">
+											<path
+												d="M12.5 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm0 3a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5zm.5 3.5a.5.5 0 0 0-.5-.5h-5a.5.5 0 0 0 0 1h5a.5.5 0 0 0 .5-.5zm-.5 2.5a.5.5 0 0 1 0 1h-5a.5.5 0 0 1 0-1h5z" />
+											<path
+												d="M16 2a2 2 0 0 0-2-2H2a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2zM4 1v14H2a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1h2zm1 0h9a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H5V1z" />
+										</svg>
+									</span>
+									<span>
+										Tracker_Details
+									</span>
+								</a>
+							</div>
+							
+						</div>
+					</li>
+        </ul>
+      </nav>
+    </div>
+  </div>
+  <!-- offcanvas -->
+  <main class="mt-5" >
+    <div class="container-fluid" >
+      <h1 id="heading" style="font-family: 'Baloo Bhai 2', cursive;">welcome {{session.username}}</h1>
+      <div class="container">
+        <table class="table table-bordered border-primary">
+          <tr>
+            <th>Tracker</th>
+            <th>About tracker</th>
+            <th>Tracker_type</th>
+            <th>Add log</th>
+            <th>Action</th>
+          </tr>
+          {%for tr in trac%}
+          
+          <tr>
+            <td><a href="/Tracker_detail/{{tr.Name}}">{{tr.Name}}</a></td>
+            <td>{{tr.Description}}</td>
+            <td>{{tr.Tracker_type}}</td>
+            <td><a href="/Add_logs/{{tr.tracker_id}}/{{tr.Name}}">
+                <h3>+</h3>
+              </a></td>
+            <td>
+              <div class="btn-group">
+                <button type="button" class="btn btn-primary">Action</button>
+                <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split" data-bs-toggle="dropdown" aria-expanded="false">
+                <span class="visually-hidden">Toggle Dropdown</span>
+                </button>
+                <ul class="dropdown-menu">
+                <li><button type="button" class="btn btn-warning"><a class="dropdown-item" href="/Update_tracker/{{tr.tracker_id}}">Edit</a></button></li>
+                <li><button type="button" class="btn btn-danger"><a class="dropdown-item" href="/Delete_tracker/{{tr.tracker_id}}">Delete</a></button></li> 
+                </ul>
+              </div>
+            </td>
+          </tr>
+          {%endfor%}
+        </table>
+        <button class="btn btn-info"><a href="/Add_tracker"><span style="color: red;"> Add Tracker </span></a></button>
+      </div>
+    </div>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
+
+<!-- offcanvas -->
+
+</body>
+</html>
