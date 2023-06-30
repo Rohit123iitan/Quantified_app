@@ -1,4 +1,4 @@
-Flask==2.0.1
+flask
 flask_sqlalchemy
 flask-security
 flask_jwt_extended
